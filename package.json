@@ -16,5 +16,8 @@
     "mocha": "^2.3.3",
     "webdriverio": "^3.3.0",
     "yargs": "^3.27.0"
+  },
+  "scripts": {
+    "test": "./run.sh"
   }
 }
