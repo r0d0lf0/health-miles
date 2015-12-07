@@ -5,14 +5,23 @@
 ### Getting Started
 Make sure you have Node installed v4.2.0+ or greater.
 
-	npm install
-	gulp
-	./start-selenium.sh
-    gulp test --on local --in e2e
+	METHOD #1
+	
+	  npm install
+	  ./start-selenium.sh
+      gulp test --on local --in e2e
+      ./stop-selenium.sh
     
-    OR (as of 12/7/2015)
+    METHOD #2
+   
+      npm install
+      npm test
     
-    ./run.sh
+    METHOD #3
+   
+      ./run.sh
+    
+    NOTE - Make sure on MACOSX to download phantomjs first and put it in the base directory.
     
 'npm install' will install node modules specified in the package.json;
 'gulp' will build the application which includes cleaning, linting and transpiling code from es6 to es5. './start-selenium-standalone.sh' will start a local standalone instance of selenium. 'gulp test --on local --in e2e' will run tests on your local machine in the e2e environment.
@@ -173,6 +182,9 @@ How to adjust **timeout** values?
 
   - Rewrite selenium-start.sh and selenium-stop.sh scripts and add run.sh. The selenium standalone server now runs in the background, this makes it easier to run everything with one command namely the run.sh which will start selenium run tests and then stop selenium. This use to be separate steps now they are combined for ease of use.
 
+12/7/15
+
+  - Setup TravisCI for continuous integration. A few tricks to get this started was to remove the local instance of phantomjs and replace it with the operating system appropriate version. Someone had emailed Travis CI support and found thir Ubuntu 12.04 machines kept phantomjs in /usr/local/phantomjs/bin/phantomjs. See integration URLS: <https://travis-ci.org/r0d0lf0/health-miles> and <https://github.com/r0d0lf0/health-miles>
 
 
 [^1]: Credit to Peter M. for sharing his info on webdriverio helping me understand some of the details.
