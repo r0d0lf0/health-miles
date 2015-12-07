@@ -5,23 +5,23 @@
 ### Getting Started
 Make sure you have Node installed v4.2.0+ or greater.
 
-	METHOD #1
+	METHOD #1 - Best way for learning (options are '--on local' or '--on phantom')
 	
 	  npm install
 	  ./start-selenium.sh
-      gulp test --on local --in e2e
+      gulp test --on local
       ./stop-selenium.sh
     
-    METHOD #2
+    METHOD #2 - Runs the npm way, using whichever option is pre-configured in run.sh
    
       npm install
       npm test
     
-    METHOD #3
+    METHOD #3 - Runs headless with '--on phantom' option
    
       ./run.sh
     
-    NOTE - Make sure on MACOSX to download phantomjs first and put it in the base directory.
+    IMPORTANT NOTES - Make sure on MACOSX to download phantomjs first and put it in the base directory. Additionally your credentials should be stored in VIRGIN_HEALTH and VIRGIN_PASSWORD environment variables. There are two modes of running, local and headless (phantomjs). This doesn't work out of the box for MACOSX because it was made specifically to be built on a travis build machine.
     
 'npm install' will install node modules specified in the package.json;
 'gulp' will build the application which includes cleaning, linting and transpiling code from es6 to es5. './start-selenium-standalone.sh' will start a local standalone instance of selenium. 'gulp test --on local --in e2e' will run tests on your local machine in the e2e environment.
