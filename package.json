@@ -14,6 +14,7 @@
     "gulp-rimraf": "^0.2.0",
     "gulp-webdriver": "^1.0.1",
     "mocha": "^2.3.3",
+    "nodemailer": "^1.10.0",
     "webdriverio": "^3.3.0",
     "yargs": "^3.27.0"
   },
