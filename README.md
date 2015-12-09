@@ -21,22 +21,29 @@ Make sure you have Node installed v4.2.0+ or greater.
    
       ./run.sh
     
-    IMPORTANT NOTES - Make sure on MACOSX to download phantomjs first and put it in the base directory. Additionally your credentials should be stored in VIRGIN_HEALTH and VIRGIN_PASSWORD environment variables. There are two modes of running, local and headless (phantomjs). This doesn't work out of the box for MACOSX because it was made specifically to be built on a travis build machine.
+    Method 2 and 3 requires you to download the platform specific version of phantomjs and save it in the base directory
     
-'npm install' will install node modules specified in the package.json;
-'gulp' will build the application which includes cleaning, linting and transpiling code from es6 to es5. './start-selenium-standalone.sh' will start a local standalone instance of selenium. 'gulp test --on local --in e2e' will run tests on your local machine in the e2e environment.
+#### Important Points
+ * There are two modes of running the first is running locally on chrome or locally headlessly with phantomjs; the second is running on a travis ci machine headlessly with phantomjs.
+ * This project does not work out of the box for you locally because it was made specifically to be ran on travis ci.
+ * To run locally make sure to download phantomjs first and put it in the base directory. 
+ * To log into your health miles account your credentials should be stored in VIRGIN_HEALTH and VIRGIN_PASSWORD environment variables.
+ * To get email notifications make sure your gmail credentials are stored in EMAIL and EMAIL_PASS environment variables.
+ 
 
 #### Additional Information
- * 'gulp test' also builds the application so you don't need to call gulp itself before hand. [ It was included to point out that 'gulp' will only build if you need to do that ]
- * './start-selenium-standalone.sh' is not needed unless you are running locally or with phantomjs.
- * 'gulp test --on local --in e2e' is meant to be a short concise human readable way to invoke tests where:
- *  --on arguments can be one of the following [local, phantom, browserstack, tep] 
- *  --in arguments can be one of the following [e2e, prd...]
+ 
+ * 'npm install' will install node modules specified in the package.json
+ * 'gulp test' builds the application and runs tests.
+ * './start-selenium.sh' and './stop-selenium.sh' are needed to start and stop selenium before running.
+ * 'gulp test --on local' is meant to be a short concise human readable way to invoke tests where:
+ *  --on arguments can be one of the following [local, phantom] 
+   
     
 #### Overview
 
 This project was created originally to test out webdriverio. It quickly grew into a full fledge Javascript based test framework. Please be advised that most of this is learning in progress. I have basically zero experience in most of the technologies here. Note you will need selenium standalone to run locally.
- 
+
 
 #### Technology and Fundamentals
 
@@ -185,6 +192,9 @@ How to adjust **timeout** values?
 12/7/15
 
   - Setup TravisCI for continuous integration. A few tricks to get this started was to remove the local instance of phantomjs and replace it with the operating system appropriate version. Someone had emailed Travis CI support and found thir Ubuntu 12.04 machines kept phantomjs in /usr/local/phantomjs/bin/phantomjs. See integration URLS: <https://travis-ci.org/r0d0lf0/health-miles> and <https://github.com/r0d0lf0/health-miles>
+  
+12/8/15
+  - Create mail.js to send an email notification with screenshots after a build is done.
 
 
 [^1]: Credit to Peter M. for sharing his info on webdriverio helping me understand some of the details.
