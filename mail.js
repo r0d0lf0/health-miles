@@ -1,6 +1,6 @@
 // This node file sends an email with two attachments cards.png and habits.png
 // it is meant to be invoked after a build is completed in Travis-ci.
-// Make sure environment variables EMAIL and EMAIL_PASS are set.
+// Make sure environment variables EMAIL and EMAIL_PASSWORD are set.
 var nodemailer = require('nodemailer');
 
 // create reusable transporter object using SMTP transport
@@ -9,7 +9,7 @@ var transporter = nodemailer.createTransport({
     auth: {
 	    // you gmail account email and password
 	    user: process.env.EMAIL,
-	    pass: process.env.EMAIL_PASS
+	    pass: process.env.EMAIL_PASSWORD
     }
 });
 
@@ -21,7 +21,7 @@ var mailOptions = {
     from: 'Travis CI <no-reply@travis-ci.org>', // sender address
     to: process.env.EMAIL, // list of receivers
     subject: 'Build complete ✔', // Subject line
-    html: 'See results:', // html body
+    html: '', // html body
     attachments: [{
        path: './cards.png'
     },

@@ -27,8 +27,8 @@ Make sure you have Node installed v4.2.0+ or greater.
  * There are two modes of running the first is running locally on chrome or locally headlessly with phantomjs; the second is running on a travis ci machine headlessly with phantomjs.
  * This project does not work out of the box for you locally because it was made specifically to be ran on travis ci.
  * To run locally make sure to download phantomjs first and put it in the base directory. 
- * To log into your health miles account your credentials should be stored in VIRGIN_HEALTH and VIRGIN_PASSWORD environment variables.
- * To get email notifications make sure your gmail credentials are stored in EMAIL and EMAIL_PASS environment variables.
+ * To log into your health miles account your credentials should be stored in VIRGIN_EMAIL and VIRGIN_PASSWORD environment variables.
+ * To get email notifications make sure your gmail credentials are stored in EMAIL and EMAIL_PASSWORD environment variables.
  
 
 #### Additional Information
