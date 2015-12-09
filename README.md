@@ -3,25 +3,26 @@
 ===========
 # Health Miles
 ### Getting Started
-Make sure you have Node installed v4.2.0+ or greater.
+Make sure you have Node installed v4.2.0+ or greater and set the environment variables VIRGIN_EMAIL and VIRGIN_PASSWORD. Additionally for Gmail notificaitons be sure to set the environment variables EMAIL and EMAIL_PASSWORD.
 
-	METHOD #1 - Best way for learning (options are '--on local' or '--on phantom')
+
+Method 1 - Best way for learning, this assumes you're running on a Mac and you have Chrome installed. If not edit wdio.conf.local.js with browserName: 'firefox' instead of browserName: 'chrome'
 	
 	  npm install
 	  ./start-selenium.sh
       gulp test --on local
       ./stop-selenium.sh
     
-    METHOD #2 - Runs the npm way, using whichever option is pre-configured in run.sh
+Method 2 - Runs the npm way
    
       npm install
       npm test
     
-    METHOD #3 - Runs headless with '--on phantom' option
+Method 3 - Runs headless with phantomjs
    
       ./run.sh
     
-    Method 2 and 3 requires you to download the platform specific version of phantomjs and save it in the base directory
+Note - that Method 2 and 3 requires you to download the platform specific version of phantomjs and save it in the base directory <http://phantomjs.org/download.html>
     
 #### Important Points
  * There are two modes of running the first is running locally on chrome or locally headlessly with phantomjs; the second is running on a travis ci machine headlessly with phantomjs.
@@ -37,7 +38,7 @@ Make sure you have Node installed v4.2.0+ or greater.
  * 'gulp test' builds the application and runs tests.
  * './start-selenium.sh' and './stop-selenium.sh' are needed to start and stop selenium before running.
  * 'gulp test --on local' is meant to be a short concise human readable way to invoke tests where:
- *  --on arguments can be one of the following [local, phantom] 
+ *  --on arguments can be one of the following [local, phantom] (options are '--on local' or '--on phantom')
    
     
 #### Overview
@@ -130,6 +131,7 @@ What is **PhantomJS**?
   2. It runs faster and lets you run tests on systems without a UI such as a Redhat Linux build machine (Jenkins).
   3. It acts like a real browser only the screen isn't drawn out, but you can still take screenshots.
   4. Make sure you get the right binary depending on you platform, there is a known issue on OSX.
+  5. Download the version you need and place it in the base directory of this project - <http://phantomjs.org/download.html>
 
 How to run **headless**?
 
