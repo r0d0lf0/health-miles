@@ -14,7 +14,7 @@ describe('sign in and complete virgin health tasks', function () {
           context$2$0.next = 2;
           return browser.url(env.signInUrl)
           // login
-          .execute("$('#oPwdID').show();").waitForVisible('#oUserID').setValue('#oUserID', env.email).waitForVisible('#oPwdID').setValue('#oPwdID', env.password).waitForVisible('#oLogon').click('#oLogon').pause(500) // page render time
+          .execute("$('#oPwdID').show();").waitForVisible('#oUserID').setValue('#oUserID', env.email).waitForVisible('#oPwdID').setValue('#oPwdID', env.password).waitForVisible('#oLogon').click('#oLogon').pause(600) // page render time
           // complete Daily Cards
           .waitForVisible('#Card1 #card-checkitout').click('#Card1 #card-checkitout').waitForVisible('#card-gotit').click('#card-gotit').pause(1200) // animation time
           .waitForVisible('#Card2 #card-checkitout').click('#Card2 #card-checkitout').waitForEnabled('#card-gotit').execute("$('div.buttons-container .btn-card:last').click()").pause(400) // animation time

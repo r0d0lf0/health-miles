@@ -1,0 +1,13 @@
+#!/bin/sh
+body='{
+"request": {
+  "branch":"master"
+}}' # x-www-form = request[branch]=master
+
+curl -s -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Travis-API-Version: 3" \
+  -H "Authorization: token <replace_me>" \
+  -d "$body" \
+  https://api.travis-ci.org/repo/r0d0lf0%2Fhealth-miles/requests

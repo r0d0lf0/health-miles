@@ -15,7 +15,7 @@ describe('sign in and complete virgin health tasks', function() {
         .setValue('#oPwdID', env.password)
         .waitForVisible('#oLogon')
         .click('#oLogon')
-        .pause(500) // page render time
+        .pause(600) // page render time
         // complete Daily Cards
         .waitForVisible('#Card1 #card-checkitout')
         .click('#Card1 #card-checkitout')
