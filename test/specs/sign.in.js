@@ -17,13 +17,13 @@ describe('sign in and complete virgin health tasks', function() {
         .click('#oLogon')
         .pause(1000) // page render time
         // complete Daily Cards
-        .waitForVisible('#Card1 #card-checkitout')
-        .click('#Card1 #card-checkitout')
+        .waitForVisible('#card-checkitout')
+        .click('#card-checkitout')
         .waitForVisible('#card-gotit')
         .click('#card-gotit')
         .pause(1200) // animation time
-        .waitForVisible('#Card2 #card-checkitout')
-        .click('#Card2 #card-checkitout')
+        .waitForVisible('#card-checkitout')
+        .click('#card-checkitout')
         .waitForEnabled('#card-gotit')
         .execute("$('div.buttons-container .btn-card:last').click()")
         .pause(500) // animation time
