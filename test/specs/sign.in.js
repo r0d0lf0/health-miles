@@ -18,13 +18,13 @@ describe('sign in and complete virgin health tasks', function() {
         .pause(1000) // page render time
         // complete Daily Cards
         .waitForVisible('#card-checkitout')
-        .click('#card-checkitout')
+        .execute("$('#card-checkitout').click()")
         .execute("$('#card-checkitout').addClass('done')") // mark it as done
         .waitForVisible('#card-gotit')
         .click('#card-gotit')
         .pause(1200) // animation time
-        .waitForVisible('#card-checkitout:not(.done)') // find the one that's not marked as done
-        .click('#card-checkitout:not(.done)')
+        .waitForVisible('#card-checkitout') 
+        .execute("$('#card-checkitout:not(.done)').click()") // click the one that's not marked as done
         .waitForEnabled('#card-gotit')
         .execute("$('div.buttons-container .btn-card:last').click()")
         .pause(500) // animation time
