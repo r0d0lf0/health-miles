@@ -28,7 +28,7 @@ describe('sign in and complete virgin health tasks', function() {
         .waitForEnabled('#card-gotit')
         .execute("$('div.buttons-container .btn-card:last').click()")
         .pause(500) // animation time
-        .waitForVisible('#nav-home')
+        .waitForVisible('#profile-dd > img')
         .saveScreenshot('./cards.png');
     });
 
@@ -44,10 +44,8 @@ describe('sign in and complete virgin health tasks', function() {
         .click('#oLogon')
         .pause(1000) // page render time
         // go to Healthy Habits
-        .waitForVisible('#navbar-top > div > ul > li:nth-child(3) > div > div.header-nav-title.title-item.nv-scope.ng-scope')
-        .click('#navbar-top > div > ul > li:nth-child(3) > div > div.header-nav-title.title-item.nv-scope.ng-scope')
-        .waitForEnabled('#nav-healthyhabits')
-        .execute("$('#nav-healthyhabits').click()")
+        .waitForVisible('#core-menuitem-tracking')
+        .click('#core-menuitem-tracking')
         // click Habits
         .waitForVisible('#page-wrapper > div > div > div > div.healthy-habits-body-wrapper > my-healthy-habits > div > div.my-trackers > div:nth-child(4) > div > div:nth-child(1) > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope')
         .execute("$('#page-wrapper > div > div > div > div.healthy-habits-body-wrapper > my-healthy-habits > div > div.my-trackers > div:nth-child(4) > div > div:nth-child(1) > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
