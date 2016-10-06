@@ -17,17 +17,19 @@ describe('sign in and complete virgin health tasks', function() {
         .click('#oLogon')
         .pause(1000) // page render time
         // complete Daily Cards
-        .waitForVisible('#card-checkitout')
-        .execute("$('#card-checkitout').click()")
-        .execute("$('#card-checkitout').addClass('done')") // mark it as done
-        .waitForVisible('#card-gotit')
-        .click('#card-gotit')
+        // click on the button that gives you the daily cards
+        .waitForVisible("#page-wrapper > div > div > div > basic-home > div > div > div.home-cards-wrapper > tour > div.dialy-tips-wrapper.ng-scope > div.dialy-tips-circle > img")
+        .execute("$('#page-wrapper > div > div > div > basic-home > div > div > div.home-cards-wrapper > tour > div.dialy-tips-wrapper.ng-scope > div.dialy-tips-circle > img').click()")
         .pause(1200) // animation time
-        .waitForVisible('#card-checkitout') 
-        .execute("$('#card-checkitout:not(.done)').click()") // click the one that's not marked as done
-        .waitForEnabled('#card-gotit')
-        .execute("$('div.buttons-container .btn-card:last').click()")
-        .pause(500) // animation time
+        // click the first card
+        .waitForVisible('#triggerCloseCurtain')
+        .execute("$('#triggerCloseCurtain').click()")
+        .pause(1200) // animation time
+        .execute("$('#page-wrapper > div > div > div > basic-home > div > div > daily-tips > div > div.next-card-btn').click()")
+        // click the second card
+        .waitForVisible('#triggerCloseCurtain')
+        .click('#triggerCloseCurtain')
+        .pause(1200) // animation time
         .waitForVisible('#profile-dd > img')
         .saveScreenshot('./cards.png');
     });
