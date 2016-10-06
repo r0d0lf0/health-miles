@@ -17,11 +17,9 @@ describe('sign in and complete virgin health tasks', function() {
         .click('#oLogon')
         .pause(1000) // page render time
         // complete Daily Cards
-        // click the first card
         .waitForVisible('#triggerCloseCurtain')
         .execute("$('#triggerCloseCurtain').click()")
         .pause(1200) // animation time
-        .execute("$('#page-wrapper > div > div > div > basic-home > div > div > daily-tips > div > div.next-card-btn').click()")
         // click the second card
         .waitForVisible('#triggerCloseCurtain')
         .click('#triggerCloseCurtain')
