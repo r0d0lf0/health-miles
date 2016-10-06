@@ -23,8 +23,7 @@ describe('sign in and complete virgin health tasks', function() {
         // click the second card
         .waitForVisible('#triggerCloseCurtain')
         .click('#triggerCloseCurtain')
-        .pause(1200) // animation time
-        .waitForVisible('#profile-dd > img')
+        .pause(2000) // animation time
         .saveScreenshot('./cards.png');
     });
 
