@@ -17,10 +17,6 @@ describe('sign in and complete virgin health tasks', function() {
         .click('#oLogon')
         .pause(1000) // page render time
         // complete Daily Cards
-        // click on the button that gives you the daily cards
-        .waitForVisible("#page-wrapper > div > div > div > basic-home > div > div > div.home-cards-wrapper > tour > div.dialy-tips-wrapper.ng-scope > div.dialy-tips-circle > img")
-        .execute("$('#page-wrapper > div > div > div > basic-home > div > div > div.home-cards-wrapper > tour > div.dialy-tips-wrapper.ng-scope > div.dialy-tips-circle > img').click()")
-        .pause(1200) // animation time
         // click the first card
         .waitForVisible('#triggerCloseCurtain')
         .execute("$('#triggerCloseCurtain').click()")
