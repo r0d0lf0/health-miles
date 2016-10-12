@@ -21,8 +21,8 @@ describe('sign in and complete virgin health tasks', function() {
         .execute("$('#triggerCloseCurtain').click()")
         .pause(1200) // animation time
         // click the second card
-        .waitForVisible('#triggerCloseCurtain')
-        .click('#triggerCloseCurtain')
+        .waitForVisible('#triggerCloseCurtain > span')
+        .click('#triggerCloseCurtain > span')
         .pause(2000) // animation time
         .saveScreenshot('./cards.png');
     });
