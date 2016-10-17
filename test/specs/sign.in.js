@@ -19,10 +19,11 @@ describe('sign in and complete virgin health tasks', function() {
         // complete Daily Cards
         .waitForVisible('#triggerCloseCurtain')
         .execute("$('#triggerCloseCurtain').click()")
+        .execute("$('#triggerCloseCurtain').attr('id','DONE')") // mark it as done
         .pause(1200) // animation time
         // click the second card
-        .waitForVisible('#triggerCloseCurtain > span')
-        .click('#triggerCloseCurtain > span')
+        .waitForVisible('#triggerCloseCurtain')
+        .execute("$('#triggerCloseCurtain').click()")
         .pause(2000) // animation time
         .saveScreenshot('./cards.png');
     });
