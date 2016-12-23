@@ -15,8 +15,9 @@ describe('sign in and complete virgin health tasks', function() {
         .setValue('#oPwdID', env.password)
         .waitForVisible('#oLogon')
         .click('#oLogon')
-        .pause(7000) // page render time
+        .pause(2000) // page render time
         // complete Daily Cards
+        .saveScreenshot('./cards.png')
         .waitForVisible('#triggerCloseCurtain')
         .execute("$('#triggerCloseCurtain').click()")
         .execute("$('#triggerCloseCurtain').attr('id','DONE')") // mark it as done
@@ -24,8 +25,7 @@ describe('sign in and complete virgin health tasks', function() {
         // click the second card
         .waitForVisible('#triggerCloseCurtain')
         .execute("$('#triggerCloseCurtain').click()")
-        .pause(2000) // animation time
-        .saveScreenshot('./cards.png');
+        .pause(2000); // animation time
     });
 
     it('should login and complete healthy habits', function*() {
