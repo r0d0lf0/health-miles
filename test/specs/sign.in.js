@@ -10,14 +10,13 @@ describe('sign in and complete virgin health tasks', function() {
         // login
         .execute("$('#oPwdID').show();")
         .waitForVisible('#oUserID')
-        .setValue('#oUserID', env.email)
+        .execute("$('#oUserID').val( '" + env.email + "');")
         .waitForVisible('#oPwdID')
-        .setValue('#oPwdID', env.password)
+        .execute("$('#oPwdID').val( '" + env.password + "');")
         .waitForVisible('#oLogon')
         .click('#oLogon')
-        .pause(2000) // page render time
+        .pause(5000) // page render time
         // complete Daily Cards
-        .saveScreenshot('./cards.png')
         .waitForVisible('#triggerCloseCurtain')
         .execute("$('#triggerCloseCurtain').click()")
         .execute("$('#triggerCloseCurtain').attr('id','DONE')") // mark it as done
@@ -25,7 +24,8 @@ describe('sign in and complete virgin health tasks', function() {
         // click the second card
         .waitForVisible('#triggerCloseCurtain')
         .execute("$('#triggerCloseCurtain').click()")
-        .pause(2000); // animation time
+        .pause(2000) // animation time
+        .saveScreenshot('./cards.png');
     });
 
     it('should login and complete healthy habits', function*() {
@@ -33,12 +33,12 @@ describe('sign in and complete virgin health tasks', function() {
         // login
         .execute("$('#oPwdID').show();")
         .waitForVisible('#oUserID')
-        .setValue('#oUserID', env.email)
+        .execute("$('#oUserID').val( '" + env.email + "');")
         .waitForVisible('#oPwdID')
-        .setValue('#oPwdID', env.password)
+        .execute("$('#oPwdID').val( '" + env.password + "');")
         .waitForVisible('#oLogon')
         .click('#oLogon')
-        .pause(1000) // page render time
+        .pause(5000) // page render time
         // go to Healthy Habits
         .waitForVisible('#core-menuitem-tracking')
         .click('#core-menuitem-tracking')
