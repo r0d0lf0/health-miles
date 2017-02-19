@@ -43,13 +43,13 @@ describe('sign in and complete virgin health tasks', function() {
         .waitForVisible('#core-menuitem-tracking')
         .click('#core-menuitem-tracking')
         // click Habits
-        .waitForVisible('#page-wrapper > div > div > div > basic-home > div > div > div:nth-child(1) > home-healthy-habits > div > div > div:nth-child(6) > home-healthy-habit-tile > div > div.home-healthy-habit-yesno.ng-scope > button.yesNo-btn.yes-btn.ng-scope')
-        .execute("$('#page-wrapper > div > div > div > basic-home > div > div > div:nth-child(1) > home-healthy-habits > div > div > div:nth-child(6) > home-healthy-habit-tile > div > div.home-healthy-habit-yesno.ng-scope > button.yesNo-btn.yes-btn.ng-scope').click()")
-        .execute("$('#page-wrapper > div > div > div > basic-home > div > div > div:nth-child(2) > home-healthy-habits > div > div > div:nth-child(6) > home-healthy-habit-tile > div > div.home-healthy-habit-yesno.ng-scope > button.yesNo-btn.yes-btn.ng-scope').click()")
-        .execute("$('#page-wrapper > div > div > div > basic-home > div > div > div:nth-child(3) > home-healthy-habits > div > div > div:nth-child(6) > home-healthy-habit-tile > div > div.home-healthy-habit-yesno.ng-scope > button.yesNo-btn.yes-btn.ng-scope').click()")
+       // click Habits
+        .waitForVisible('#page-wrapper > div > div > div > div > div.healthy-habits-body-wrapper > my-healthy-habits > div > div.my-trackers > div:nth-child(4) > div > div:nth-child(1) > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope')
+        .execute("$('#page-wrapper > div > div > div > div > div.healthy-habits-body-wrapper > my-healthy-habits > div > div.my-trackers > div:nth-child(4) > div > div:nth-child(1) > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
+        .execute("$('#page-wrapper > div > div > div > div > div.healthy-habits-body-wrapper > my-healthy-habits > div > div.my-trackers > div:nth-child(4) > div > div:nth-child(2) > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
+        .execute("$('#page-wrapper > div > div > div > div > div.healthy-habits-body-wrapper > my-healthy-habits > div > div.my-trackers > div:nth-child(4) > div > div:nth-child(3) > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
         .pause(500) // javascript buffer time
-        .execute("$('#page-wrapper > div > div > div > basic-home > div > div > div:nth-child(4) > home-healthy-habits > div > div > div:nth-child(6) > home-healthy-habit-tile > div > div.home-healthy-habit-yesno.ng-scope > button.yesNo-btn.yes-btn.ng-scope').click()")
-        .pause(500) // animation time
+        .execute("$('#page-wrapper > div > div > div > div > div.healthy-habits-body-wrapper > my-healthy-habits > div > div.my-trackers > div:nth-child(4) > div > div:nth-child(4) > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
         .scroll(0, 250)
         .pause(500) // scroll time
         .saveScreenshot('./habits.png');
