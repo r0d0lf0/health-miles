@@ -43,13 +43,12 @@ describe('sign in and complete virgin health tasks', function() {
         .waitForVisible('#core-menuitem-tracking')
         .click('#core-menuitem-tracking')
         // click Habits
-       // click Habits
-        .waitForVisible('#page-wrapper > div > div > div > div > div.healthy-habits-body-wrapper > my-healthy-habits > div > div.my-trackers > div:nth-child(4) > div > div:nth-child(1) > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope')
-        .execute("$('#page-wrapper > div > div > div > div > div.healthy-habits-body-wrapper > my-healthy-habits > div > div.my-trackers > div:nth-child(4) > div > div:nth-child(1) > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
-        .execute("$('#page-wrapper > div > div > div > div > div.healthy-habits-body-wrapper > my-healthy-habits > div > div.my-trackers > div:nth-child(4) > div > div:nth-child(2) > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
-        .execute("$('#page-wrapper > div > div > div > div > div.healthy-habits-body-wrapper > my-healthy-habits > div > div.my-trackers > div:nth-child(4) > div > div:nth-child(3) > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
+        .waitForVisible('#tracker_738 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope')
+        .execute("$('#tracker_738 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
+        .execute("$('#tracker_726 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
+        .execute("$('#tracker_654 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
         .pause(500) // javascript buffer time
-        .execute("$('#page-wrapper > div > div > div > div > div.healthy-habits-body-wrapper > my-healthy-habits > div > div.my-trackers > div:nth-child(4) > div > div:nth-child(4) > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
+        .execute("$('#tracker_652 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
         .scroll(0, 250)
         .pause(500) // scroll time
         .saveScreenshot('./habits.png');
