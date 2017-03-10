@@ -43,8 +43,8 @@ describe('sign in and complete virgin health tasks', function() {
         .waitForVisible('#core-menuitem-tracking')
         .click('#core-menuitem-tracking')
         // click Habits
-        .waitForVisible('#tracker_726 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope')
-        .execute("$('#tracker_726 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
+        .waitForVisible('#tracker_683 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope')
+        .execute("$('#tracker_683 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
         .execute("$('#tracker_654 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
         .execute("$('#tracker_652 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
         .pause(500) // javascript buffer time
