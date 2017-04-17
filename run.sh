@@ -1,3 +1,3 @@
 ./start-selenium.sh
-gulp test --on phantom
+gulp test --on local 
 ./stop-selenium.sh
