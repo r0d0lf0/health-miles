@@ -47,6 +47,7 @@ describe('sign in and complete virgin health tasks', function() {
         .execute("$('#tracker_44 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
         .execute("$('#tracker_58 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
         .execute("$('#tracker_683 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
+        .execute("$('#tracker_689 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()") // temp: walk & talk challenge
         .pause(500) // javascript buffer time
         .execute("$('#tracker_654 > div > div.title.col-md-4 > div > form > div > div.row > div > div > button.btn-choice-yes.ng-scope').click()")
         .scroll(0, 250)
