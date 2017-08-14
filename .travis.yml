@@ -11,6 +11,6 @@ before_install:
 after_script:
   - node mail.js
 sudo:
-  - true
+  - required
 dist:
   - trusty
