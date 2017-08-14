@@ -13,4 +13,4 @@ after_script:
 sudo:
   - required
 dist:
-  - trusty
+  - precise
