@@ -9,7 +9,5 @@ before_install:
   - ls -al
 after_script:
   - node mail.js
-sudo:
-  - false
-dist:
-  - trusty
+os: 
+  - osx
