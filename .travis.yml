@@ -8,6 +8,7 @@ before_install:
   - tar -xjf phantomjs-2.0.0-ubuntu-14.04.tar.bz2
   - ls -al
   - pwd
+  - echo $PATH
 after_script:
   - node mail.js
 sudo:
