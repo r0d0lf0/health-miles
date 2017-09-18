@@ -6,8 +6,7 @@ before_script:
 before_install:
   - wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-14.04.tar.bz2
   - tar -xjf phantomjs-2.0.0-ubuntu-14.04.tar.bz2
-  - rm -rf /usr/local/phantomjs/bin/phantomjs
-  - mv phantomjs /usr/local/phantomjs/bin/phantomjs
+  - ls -al
 after_script:
   - node mail.js
 sudo:
