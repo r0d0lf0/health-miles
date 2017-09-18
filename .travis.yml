@@ -9,6 +9,7 @@ before_install:
   - ls -al
   - pwd
   - echo $PATH
+  - export PATH=$(pwd):$PATH
 after_script:
   - node mail.js
 sudo:
