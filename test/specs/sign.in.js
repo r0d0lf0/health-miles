@@ -8,6 +8,7 @@ describe('sign in and complete virgin health tasks', function() {
     it('should login successfully and complete two daily cards', function*() {
       yield browser.url(env.signInUrl)
         // login
+        .pause(6000) // page render time
         .execute("$('#oPwdID').show();")
         .waitForVisible('#oUserID')
         .execute("$('#oUserID').val( '" + env.email + "');")
